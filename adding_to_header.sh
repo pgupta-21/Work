@@ -1,5 +1,6 @@
 #!/bin/bash
 # Find all fasta files within subfolders and process them
+# here, all the fasta files were checked and folder name was added in front of them
 
 find . -maxdepth 2 -mindepth 2 -type f -name "*.fasta" | parallel '
     subfolder=$(basename $(dirname {}))
