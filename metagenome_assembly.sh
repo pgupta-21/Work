@@ -20,7 +20,7 @@ seqtk seq -L 600 assembly.fa > assembly_GT600.fasta
 seqkit stats *.fasta
 
 # Blast
-# to comapre against the seqpool
+# to compare against the seqpool
 /usr/local/share/bin/blastn -query assembly_GT600.fasta -db /bigdata/blastdbv5/seqpool -out /mnt/pg/blast.txt -num_threads 72 #pathway for seqpool -> /bigdata/blastdbv5/seqpool
 # form a local blast db using genome.fa
 /usr/local/share/bin/makeblastdb -in genome.fa -parse_seqids -dbtype nucl -title db_name -out db/db_name
